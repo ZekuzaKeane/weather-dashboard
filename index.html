@@ -14,6 +14,7 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
   </head>
   <body>
     <header>
@@ -24,17 +25,46 @@
         </div>
     </header>
     <main>
-        <div class="container-fluid row m-4 text-center">
-            <div class="col-3">
-                <h1>Search for a City!</h1>
-                <div class="mb-3">
-                    <input class="form-control" id="searchInput" placeholder="City Name">
-                    <button type="button" class="btn btn-primary mt-3 w-100" id="search-btn">Search</button>
-                  </div>
+        <div class="container-fluid m-4">
+            <div class="row align-items-start">
+                <div class="col-3 min-vh-100 text-center">
+                    <h1>Search for a City!</h1>
+                    <div class="mb-3">
+                        <input class="form-control" id="searchInput" placeholder="City Name">
+                        <button type="button" class="btn btn-primary mt-3 w-100" id="search-btn">Search</button>
+                    </div>
+                    <div class="row" id="recentHistory">
+                    </div>
+                </div>
+            <div class="col-8 m-4">
+                <div class="border border-dark p-2">
+                    <h1>City Name</h1>
+                    <h4>City Temperature</h4>
+                    <h4>City Wind</h4>
+                    <h4>City Humidity</h4>
+                </div>
+                <div class="text-left">
+                    <h2>5-Day Forecast:</h2>
+                    <div class="d-inline-flex">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Date</h5>
+                              <p class="card-text">Temp</p>
+                              <p class="card-text">Wind</p>
+                              <p class="card-text">Humidity</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            
             </div>
-            <div class="container col-5 m-4 text-center">
             </div>
-        </div>
+            <br />
+                
+            
+            
         
     </div>
     </main>
@@ -44,6 +74,6 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
     crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    
   </body>
 </html>
