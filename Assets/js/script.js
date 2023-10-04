@@ -1,12 +1,16 @@
 var searchButton = $('#search-btn');
 var searchInput = $('#searchInput');
 var recentHistory = $('#recentHistory');
+var cardRow = $('#cardRow')
 var cityName = 'undefined';
 var lat = 0;
 var lon = 0;
 var temp = [];
 var wind = [];
 var humidity = [];
+var date = [];
+
+var now = dayjs().format('DD'+'/'+"MM"+"/"+"YYYY")
 
 function searchButtonHandler() {
     if (searchInput.val() === '') {
@@ -53,6 +57,8 @@ function getAPI() {
             temp.push(data.list[i].main.temp);
             wind.push(data.list[i].wind.speed);
             humidity.push(data.list[i].main.humidity);
+            date.push(data.list[i].dt_txt);
+
         }
         renderAPI();
     })
@@ -61,13 +67,7 @@ function getAPI() {
 }
 
 function renderAPI() {
-    var cityHistory = JSON.parse(localStorage.getItem('cityHistory')) || [];
-
-    for (var i = 0; i < cityHistory.length; i++) {
-        var searchResults = $('<h4>');
-        searchResults.text(cityHistory[i]);
-        recentHistory.append(searchResults);
-    }
+    
 }
 
 
